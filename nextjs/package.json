@@ -1,0 +1,30 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "001:dev": "NEXT_PUBLIC_BANK_CODE=001 NEXT_PUBLIC_BANK_NAME=BBX NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:3000 next dev -p 3000",
+    "002:dev": "NEXT_PUBLIC_BANK_CODE=002 NEXT_PUBLIC_BANK_NAME=CTER NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:3001 next dev -p 3001"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.13",
+    "@mui/material": "^5.14.13",
+    "@mui/x-data-grid": "^6.16.2",
+    "@types/node": "20.8.6",
+    "@types/react": "18.2.28",
+    "@types/react-dom": "18.2.13",
+    "eslint": "8.51.0",
+    "eslint-config-next": "13.5.4",
+    "next": "13.5.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.2.2"
+  }
+}

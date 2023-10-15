@@ -35,6 +35,9 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/bank-accounts/{{bankAccountId2}}
 
+###
+GET http://localhost:3000/bank-accounts/{{bankAccountId2}}/pix-keys
+
 #### Create a new pix key for bank account 2
 POST http://localhost:3000/bank-accounts/{{bankAccountId2}}/pix-keys
 Content-Type: application/json

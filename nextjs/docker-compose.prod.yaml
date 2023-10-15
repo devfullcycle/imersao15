@@ -1,0 +1,35 @@
+services:
+  frontend_bbx:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        - NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:3000
+      extra_hosts:
+        - 'host.docker.internal:host-gateway'
+    ports:
+      - 8000:3000
+    environment:
+      - NEXT_PUBLIC_BANK_CODE=001 
+      - NEXT_PUBLIC_BANK_NAME=BBX 
+      - NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:3000
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+  
+
+  cter:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        - NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:3001
+      extra_hosts:
+        - 'host.docker.internal:host-gateway'
+    ports:
+      - 8001:3000
+    environment:
+      - NEXT_PUBLIC_BANK_CODE=002
+      - NEXT_PUBLIC_BANK_NAME=CTER 
+      - NEXT_PUBLIC_NEST_API_URL=http://host.docker.internal:3001
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
