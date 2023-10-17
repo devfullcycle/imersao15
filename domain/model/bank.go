@@ -13,6 +13,7 @@ type Bank struct {
 	Accounts []*Account `valid:"-"`
 }
 
+//a declaração de método abaixo esta sendo vinculada à struct de "Bank", permitindo acessar o "isValid" de dentro da mesma
 func (bank *Bank) isValid() error {
 	_, err := govalidator.ValidateStruct(bank)
 	if err != nil {

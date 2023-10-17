@@ -6,6 +6,7 @@ import (
 )
 
 func init() {
+	// setar todos os campos marcados como required para validar por padrão
 	govalidator.SetFieldsRequiredByDefault(true)
 }
 

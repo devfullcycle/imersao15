@@ -1,4 +1,5 @@
 module github.com/codeedu/imersao/codepix-go
+// module github.com/StealthWorm/imersao-full-cycle-15
 
 go 1.15
 
