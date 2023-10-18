@@ -2,6 +2,7 @@ package repository
 
 import (
 	"fmt"
+
 	"github.com/codeedu/imersao/codepix-go/domain/model"
 	"gorm.io/gorm"
 )
@@ -28,6 +29,7 @@ func (t *TransactionRepositoryDb) Save(transaction *model.Transaction) error {
 
 func (t *TransactionRepositoryDb) Find(id string) (*model.Transaction, error) {
 	var transaction model.Transaction
+	//preload permite pegar dados vinculados ao registro, porem que estão em outras tabelas, do contrário tarria apenas o campo usado na referencia
 	t.Db.Preload("AccountFrom.Bank").First(&transaction, "id = ?", id)
 
 	if transaction.ID == "" {
