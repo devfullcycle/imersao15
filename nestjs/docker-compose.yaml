@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+      - 3001:3001
+    volumes:
+      - .:/home/node/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  
+  db:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_PASSWORD: root
+    volumes:
+      - .docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql

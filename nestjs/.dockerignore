@@ -1,0 +1,11 @@
+.docker/
+.devcontainer/
+.git/
+.history/
+.vscode/
+node_modules/
+dist/
+
+.bank-001.env
+.bank-002.env
+.env
