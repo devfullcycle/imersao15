@@ -12,7 +12,7 @@ Utilizamos Docker para que todos os serviços que utilizaremos fiquem disponíve
 
 - Faça o clone do projeto
 - Tendo o docker instalado em sua máquina apenas execute:
-`docker-compose up -d`
+`docker compose up -d`
 
 ### Como executar a aplicação
 - Acesse o container da aplicação executando: `docker exec -it codepix_app bash`
@@ -30,4 +30,8 @@ Utilizamos Docker para que todos os serviços que utilizaremos fiquem disponíve
 - Confluent control center
 - ZooKeeper
 
- 
+---
+
+### Possíveis erros
+
+Caso esteja recebendo algum erro de dependências do `Golang` veja este guia: [Guia de ajustes](../README.md#alterações-no-dockerfile---go)
