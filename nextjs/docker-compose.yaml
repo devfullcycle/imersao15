@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8000:3000
+      - 8001:3001
+    volumes:
+      - .:/home/node/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
