@@ -18,4 +18,4 @@ COPY . .
 
 RUN GOOS=linux go build -ldflags="-s -w" -o codepix
 
-ENTRYPOINT ["./codepix all"]
+ENTRYPOINT ["./codepix"]
